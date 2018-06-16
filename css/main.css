@@ -2,17 +2,6 @@
     height: 20vh;
 }
 
-.center-wrapper {
-    display: flex;
-  /* Align Vertically */
-  align-items: center;
-  /* Align Horizontally */
-  justify-content: center;
-  /* --- ---------- ----- */
-  width: 100%;
-  height:100%;
-}
-
 .color-dark{
     color: black;
 }
@@ -23,44 +12,43 @@
 .hide{
     display: none;
 }
+.transparentBG {
+    background-color: rgba(0, 0, 0, 0.349);
+  }
 
-.dropdown-content{
-    position: relative;
-}
 .logo-img {
-    /* height: 30vh; */
     vertical-align: middle;
-    padding: 4vw 1vw 0vw 1vw ;
+    padding: 4vh 1vw 0vw 1vw ;
     margin-left: 1vw;
+    margin-right:0;
     border-bottom-right-radius: 5vh;
     border-bottom-left-radius: 5vh;
 }
 
-.space {
+.logo-img-right {
+    vertical-align: middle;
+    padding: 4vh 1vw 0vw 1vw ;
+    margin-right: 1vw;
+    border-bottom-right-radius: 5vh;
+    border-bottom-left-radius: 5vh;
+}
+
+.patternBG{
+    background-image: url("../img/spring.png");
+}
+
+.main-pattern{
+    background-image: url("../img/5002.png");
+}
+.menu-container{
+    position: absolute;
+    right:0;
+}
+.menu-button {
+    position: relative; 
+    display: block;
+    margin:10px 0;
+    border-top-left-radius: 100px; 
+    border-bottom-left-radius: 100px;
     width: 10vw;
-}
-
-body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-}
-
-main {
-flex: 1 0 auto;
-display: table;
-}
-
-.image-med-and-large {
-    width:100vw;
-    height:100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/church.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.image-small {
-    width:100%;
-    height:70vh;
-    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url("../img/420014.jpg");
 }
