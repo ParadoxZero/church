@@ -15,8 +15,7 @@
         <div class="valign-wrapper" style="">
             <nav class="main-pattern z-depth-0" style="">
                 <div class="nav-wrapper">
-                    <a href="#!" class="brand-logo hide-on-med-and-down"><div class="white accent-1 logo-img z-depth-3" ><img src="img/logo.png" class="logo" style="width:10vw; height: auto;"></div></a>
-                    <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only"><i class="material-icons color-dark">menu</i></a>
+                    <a href="#!" class="brand-logo hide-on-med-and-down"><div class="logo-img z-depth-3 main-pattern" ><img src="img/logo.png" class="logo" style="width:10vw; height: auto;"></div></a>
                     <a href="#!" class="brand-logo center hide-on-med-and-down"><div class="color-dark">St. George Orthodox Church</div></a>
                     <ul class="right hide-on-med-and-down">
                             <li><a class="color-dark hoverable waves-effect" href="#">News Letter</a></li>
@@ -24,15 +23,29 @@
                             <li><a class="color-dark hoverable waves-effect" href="#">Contact Us</a></li>
                             <li><a class="color-dark hoverable waves-effect" href="#">About</a></li>
                     </ul>
-                    <a href="#!" class="brand-logo right hide-on-med-and-down hide" style=""><div class="white accent-1 logo-img-right z-depth-3" ><img src="img/logo.png" class="logo"></div></a>
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only waves-effect"><i class="material-icons color-dark">menu</i></a>
+                    <a href="#!" class="brand-logo center hide-on-large-only" style="width:75%"><h5 class="color-dark">St. George Orthodox Church</h5></a>
                 </div>
             </nav>
         </div>
         <ul class="sidenav" id="mobile-demo">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">Javascript</a></li>
-            <li><a href="mobile.html">Mobile</a></li>
+            <li><div class="user-view">
+                <div class="background">
+                    <img src="img/white-2398946_640.jpg">
+                </div>
+                <a href="#user"><img class="" style="width: 50%" src="img/logo-small.png"></a>
+                <a href="#name"><span class="color-dark name">St. George Orthodox Church</span></a>
+                <a href="#email"><span class="color-dark email">Dwarka</span></a>
+            </div></li>
+            <li><a href="#">News Letter</a></li>
+            <li><a href="#">Souviner</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="">Vicars</a></li>
+            <li><a href="">Management</a></li>
+            <li><a href="">Organisations</a></li>
+            <li><div class="divider"></div></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">About</a></li>
         </ul>
     </header>
 
@@ -40,19 +53,14 @@
     * Main Body                                                    *
     ************************************************************ -->
     <main class="">
-        <!-- Dropdown Structure -->
-        <ul id='manage_drop' class='dropdown-content'>
-            <li><a href="#!">Vicars</a></li>
-            <li class="divider" tabindex="-1"></li>
-            <li><a href="#!">Committe</a></li>
-        </ul>
         <div class="parallax-container" style="">
             <div class="parallax">
-                <img class="responsive-img" src="img/420014.jpg" style="width:100%">
+                <img class="" src="img/420014.jpg">
             </div>
-            <div class="menu-container" style="top:25vh">
-                <a class='dropdown-trigger hoverable btn white color-dark accent-1 menu-button waves-effect' style="" href='#' data-target='manage_drop'>Vicar</a>
-                <a class='dropdown-trigger hoverable btn white color-dark accent-1 menu-button waves' style="" href='#' data-target='manage_drop'>Management</a>
+            <div class="menu-container hide-on-med-and-down" style="top:25vh">
+                <a class="hoverable btn main-pattern color-dark menu-button waves-effect">Vicar</a>
+                <a class="hoverable btn main-pattern color-dark menu-button waves-effect">Management</a>
+                <a class="hoverable btn main-pattern color-dark menu-button waves-effect">Organisations</a>
             </div>
         </div>
         <div class="container">
@@ -109,7 +117,7 @@
         </div>
         <div class="footer-copyright">
             <div class="container">
-            © 2014 Copyright Sidhin S Thomas
+                Copyright © 2014 Sidhin S Thomas
             <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
             </div>
         </div>

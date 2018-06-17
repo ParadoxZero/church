@@ -16,6 +16,10 @@
     background-color: rgba(0, 0, 0, 0.349);
   }
 
+.mobile-logo {
+    position: relative;
+    height: 90%;
+}
 .logo-img {
     vertical-align: middle;
     padding: 4vh 1vw 0vw 1vw ;
@@ -38,7 +42,7 @@
 }
 
 .main-pattern{
-    background-image: url("../img/5002.png");
+    background-image: url("../img/5009.png");
 }
 .menu-container{
     position: absolute;
@@ -50,5 +54,14 @@
     margin:10px 0;
     border-top-left-radius: 100px; 
     border-bottom-left-radius: 100px;
-    width: 10vw;
+    width: 12vw;
+}
+
+.menu-button-mobile {
+    position: relative; 
+    display: block;
+    margin:10px 0;
+    border-top-left-radius: 100px; 
+    border-bottom-left-radius: 100px;
+    width: 10vh;
 }
