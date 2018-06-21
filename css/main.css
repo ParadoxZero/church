@@ -1,7 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather+Sans');
+@import url('https://fonts.googleapis.com/css?family=Passion+One');
 
 .brand-logo {
-    font-family: 'Merriweather Sans', sans-serif;
+    font-family: 'Passion One', cursive;
+    font-size: 3em;
 }
 .logo {
     height: 20vh;
@@ -47,7 +48,7 @@
 }
 
 .main-pattern{
-    background-image: url("../img/5009.png");
+    background-image: url("../img/straws.png");
 }
 .menu-container{
     position: absolute;
