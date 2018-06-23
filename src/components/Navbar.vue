@@ -13,7 +13,7 @@
                           <li><a class="color-dark hoverable waves-effect" href="#" id="about">About</a></li>
                   </ul>
                   <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only waves-effect"><i class="material-icons color-dark">menu</i></a>
-                  <a href="#!" class="brand-logo center hide-on-large-only" style="width:45%"><h6 class="color-dark">St. George Orthodox Church</h6></a>
+                  <a href="#!" class="brand-logo center hide-on-large-only" style="margin:0; padding:0;"><h5 class="color-dark" style="margin:0; padding:0">St. George Orthodox Church</h5></a>
               </div>
           </nav>
       </div>

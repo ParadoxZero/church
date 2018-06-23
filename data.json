@@ -1,0 +1,12 @@
+{
+  "about": {
+    "title": "About us",
+    "blockquote": "Dwarka's orthodox church!",
+    "body": "Hello World"
+  },
+  "notifications": [
+    "Test notification 1",
+    "Test notification 2"
+  ],
+  "test": "test string"
+}
