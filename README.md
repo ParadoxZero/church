@@ -1,6 +1,6 @@
-# st-george-orthodox-church-dwarka
+# St George Orthodox Church, Dwarka
 
-> Website for St. George Orthodox Church, Dwarka
+Website for St. George Orthodox Church, Dwarka using `vue.js` and `materialze.css`.
 
 ## Build Setup
 
