@@ -1,21 +1,27 @@
 <template>
-<main class="">
-  <div id="home">
-      <div class="parallax-container" style="height: 60vh;">
-          <div class="parallax">
-              <img class="" src="./../assets/img/420014.jpg">
-              <h5>What up</h5>
-          </div>
+  <main class="main-pattern" style="">
+    <div id="home">
+      <div class="parallax-container" style="height: 80vh;z-index:10">
+        <div class="parallax">
+          <img class="" src="./../assets/img/420014.jpg">
+        </div>
       </div>
-      <div class="container" id="about-div">
-          <h2>{{title}}</h2>
-          <blockquote>
+      <div class="">
+        <div class="container" id="about-div">
+          <h3>{{title}}</h3>
+          <blockquote v-if="blockquote">
               {{blockquote}}
           </blockquote>
           <span v-html="body"></span>
+          <h4>{{title}}</h4>
+          <blockquote v-if="blockquote">
+              {{blockquote}}
+          </blockquote>
+          <span v-html="body"></span>
+        </div>
       </div>
-  </div>
-</main>
+    </div>
+  </main>
 </template>
 
 <script>
@@ -41,6 +47,5 @@ export default {
 </script>
 
 <style scoped>
-
 </style>
 

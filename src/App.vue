@@ -22,4 +22,11 @@ export default {
 </script>
 
 <style>
+.patternBG {
+  background-image: url("@/../assets/img/spring.png");
+}
+
+.main-pattern {
+  background-image: url("@/../assets/img/straws.png");
+}
 </style>

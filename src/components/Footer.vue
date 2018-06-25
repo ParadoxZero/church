@@ -23,7 +23,7 @@
     </div>
     <div class="footer-copyright">
         <div class="container">
-            Copyright © 2014 <a href="http://www.sidhin.in"  target="blank" class="white-text">Sidhin S Thomas</a>
+            Copyright © 2018 <a href="http://www.sidhin.in"  target="blank" class="white-text">Sidhin S Thomas</a>
         <a class="grey-text text-lighten-4 right" href="#!">More Links</a>
         </div>
     </div>

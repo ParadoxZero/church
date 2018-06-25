@@ -1,11 +1,11 @@
 <template>
   <header>
     <div id="navbar">
-      <div class="valign-wrapper" style="" >
+      <div class="navbar-fixed" style="" >
           <nav class="main-pattern z-depth-0" style="">
               <div class="nav-wrapper">
-                  <a href="#!" class="brand-logo hide-on-med-and-down" style="position: fixed"><div class="logo-img z-depth-3 main-pattern" ><img src="@/assets/img/logo.png" class="logo" style="width:10vw; height: auto;"></div></a>
-                  <a href="#!" class="brand-logo center hide-on-med-and-down"><div class="color-dark">St. George Orthodox Church</div></a>
+                  <router-link to="/" class="brand-logo hide-on-med-and-down" style=""><div class="logo-img z-depth-3 main-pattern" ><img src="@/assets/img/logo.png" class="logo" style="width:10vw; height: auto;"></div></router-link>
+                  <router-link to="/" class="brand-logo center hide-on-med-and-down"><div class="color-dark">St. George Orthodox Church</div></router-link>
                   <ul class="right hide-on-med-and-down">
                           <li><a class="color-dark hoverable waves-effect" href="#">News Letter</a></li>
                           <li><a class="color-dark hoverable waves-effect" href="#">Souviner</a></li>
@@ -15,6 +15,11 @@
                   <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only waves-effect"><i class="material-icons color-dark">menu</i></a>
                   <a href="#!" class="brand-logo center hide-on-large-only" style="margin:0; padding:0;"><h5 class="color-dark" style="margin:0; padding:0">St. George Orthodox Church</h5></a>
               </div>
+            <div class="menu-container hide-on-med-and-down" style="top:25vh">
+              <router-link to="/vicars" class="hoverable btn main-pattern color-dark menu-button waves-effect">Vicar</router-link>
+              <router-link to="/management" class="hoverable btn main-pattern color-dark menu-button waves-effect">Management</router-link>
+              <router-link to="/organisations" class="hoverable btn main-pattern color-dark menu-button waves-effect">Organisations</router-link>
+            </div>
           </nav>
       </div>
       <ul class="sidenav main-pattern" id="mobile-demo">
@@ -34,11 +39,6 @@
           <li><a href="#">Contact</a></li>
           <li><a href="#">About</a></li>
       </ul>
-    </div>
-    <div class="menu-container hide-on-med-and-down" style="top:25%">
-      <a class="hoverable btn main-pattern color-dark menu-button waves-effect">Vicar</a>
-      <a class="hoverable btn main-pattern color-dark menu-button waves-effect">Management</a>
-      <a class="hoverable btn main-pattern color-dark menu-button waves-effect">Organisations</a>
     </div>
   </header>
 </template>
@@ -68,23 +68,15 @@ export default {
 </script>
 
 <style scoped>
+nav {
+  z-index: 100;
+}
 .brand-logo {
   font-family: "Passion One", cursive;
   font-size: 3em;
 }
 .logo {
   height: 20vh;
-}
-
-.color-dark {
-  color: black;
-}
-.color-dark-accent {
-  color: #555;
-}
-
-.transparentBG {
-  background-color: rgba(0, 0, 0, 0.349);
 }
 
 .mobile-logo {
@@ -107,17 +99,18 @@ export default {
   border-bottom-right-radius: 5vh;
   border-bottom-left-radius: 5vh;
 }
-
-.patternBG {
-  background-image: url("./../assets/img/spring.png");
-}
-
-.main-pattern {
-  background-image: url("./../assets/img/straws.png");
+.logo-img-bottom {
+  vertical-align: middle;
+  padding: 4vh 1vw 0vw 1vw;
+  margin-right: 1vw;
+  border-bottom-right-radius: 5vh;
+  border-bottom-left-radius: 5vh;
+  bottom: 0;
 }
 .menu-container {
   position: absolute;
   right: 0;
+  z-index: 100;
 }
 .menu-button {
   position: relative;
