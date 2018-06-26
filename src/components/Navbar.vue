@@ -5,20 +5,20 @@
           <nav class="main-pattern z-depth-0" style="">
               <div class="nav-wrapper">
                   <router-link to="/" class="brand-logo hide-on-med-and-down" style=""><div class="logo-img z-depth-3 main-pattern" ><img src="@/assets/img/logo.png" class="logo" style="width:10vw; height: auto;"></div></router-link>
-                  <router-link to="/" class="brand-logo center hide-on-med-and-down"><div class="color-dark">St. George Orthodox Church</div></router-link>
+                  <router-link to="/" class="brand-logo center hide-on-med-and-down"><div class="grey-text text-darken-2">St. George Orthodox Church</div></router-link>
                   <ul class="right hide-on-med-and-down">
-                          <li><a class="color-dark hoverable waves-effect" href="#">News Letter</a></li>
-                          <li><a class="color-dark hoverable waves-effect" href="#">Souviner</a></li>
-                          <li><a class="color-dark hoverable waves-effect" href="#">Contact Us</a></li>
-                          <li><a class="color-dark hoverable waves-effect" href="#" id="about">About</a></li>
+                          <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#">News Letter</a></li>
+                          <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#">Souviner</a></li>
+                          <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#">Contact Us</a></li>
+                          <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#" id="about">About</a></li>
                   </ul>
                   <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only waves-effect"><i class="material-icons color-dark">menu</i></a>
-                  <a href="#!" class="brand-logo center hide-on-large-only" style="margin:0; padding:0;"><h5 class="color-dark" style="margin:0; padding:0">St. George Orthodox Church</h5></a>
+                  <a href="#!" class="brand-logo center hide-on-large-only" style="margin:0; padding:0;"><h5 class="grey-text text-darken-2" style="margin:0; padding:0">St. George Orthodox Church</h5></a>
               </div>
             <div class="menu-container hide-on-med-and-down" style="top:25vh">
-              <router-link to="/vicars" class="hoverable btn main-pattern color-dark menu-button waves-effect">Vicar</router-link>
-              <router-link to="/management" class="hoverable btn main-pattern color-dark menu-button waves-effect">Management</router-link>
-              <router-link to="/organisations" class="hoverable btn main-pattern color-dark menu-button waves-effect">Organisations</router-link>
+                <router-link to="/vicars" class="hoverable btn main-pattern grey-text text-darken-3 menu-button waves-effect">Vicar</router-link>
+                <router-link to="/management" class="hoverable btn main-pattern grey-text text-darken-3 menu-button waves-effect">Management</router-link>
+                <router-link to="/organisations" class="hoverable btn main-pattern grey-text text-darken-3 menu-button waves-effect">Organisations</router-link>
             </div>
           </nav>
       </div>
