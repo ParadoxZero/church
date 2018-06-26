@@ -1,13 +1,10 @@
 <template>
   <main class="main-pattern" style="">
     <div id="home">
-      <div class="parallax-container" style="height: 80vh;z-index:10">
-        <div class="parallax">
-          <img class="" src="./../assets/img/420014.jpg">
-        </div>
+      <div class="church-bg" style="height:100vh" >
       </div>
       <div class="">
-        <div class="container" id="about-div">
+        <div class="" id="about-div">
           <h3>{{title}}</h3>
           <blockquote v-if="blockquote">
               {{blockquote}}
