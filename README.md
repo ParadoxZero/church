@@ -1,5 +1,7 @@
 # St George Orthodox Church, Dwarka
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/ParadoxZero/church.svg)](https://greenkeeper.io/)
+
 Website for St. George Orthodox Church, Dwarka using `vue.js` and `materialze.css`.
 
 > The website can be found [here](http://sidhin.in/church)
