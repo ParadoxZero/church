@@ -10,3 +10,8 @@
 .transparentBG {
   background-color: rgba(0, 0, 0, 0.349);
 }
+
+.zero {
+  margin: 0;
+  padding: 0;
+}

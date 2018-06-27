@@ -7,18 +7,19 @@
                   <router-link to="/" class="brand-logo hide-on-med-and-down" style=""><div class="logo-img z-depth-3 main-pattern" ><img src="@/assets/img/logo.png" class="logo" style="width:10vw; height: auto;"></div></router-link>
                   <router-link to="/" class="brand-logo center hide-on-med-and-down"><div class="grey-text text-darken-2">St. George Orthodox Church</div></router-link>
                   <ul class="right hide-on-med-and-down">
-                          <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#">News Letter</a></li>
-                          <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#">Souviner</a></li>
-                          <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#">Contact Us</a></li>
-                          <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#" id="about">About</a></li>
+                    <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#">News Letter</a></li>
+                    <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#">Contact Us</a></li>
+                    <li><a class="grey-text text-darken-3 hoverable waves-effect" href="#" id="about">About</a></li>
                   </ul>
                   <a href="#" data-target="mobile-demo" class="sidenav-trigger hide-on-large-only waves-effect"><i class="material-icons color-dark">menu</i></a>
                   <a href="#!" class="brand-logo center hide-on-large-only" style="margin:0; padding:0;"><h5 class="grey-text text-darken-2" style="margin:0; padding:0">St. George Orthodox Church</h5></a>
               </div>
-            <div class="menu-container hide-on-med-and-down" style="top:25vh">
+            <div class="menu-container hide-on-med-and-down" style="top:100px">
                 <router-link to="/vicars" class="hoverable btn main-pattern grey-text text-darken-3 menu-button waves-effect">Vicar</router-link>
                 <router-link to="/management" class="hoverable btn main-pattern grey-text text-darken-3 menu-button waves-effect">Management</router-link>
                 <router-link to="/organisations" class="hoverable btn main-pattern grey-text text-darken-3 menu-button waves-effect">Organisations</router-link>
+                <router-link to="/souviner" class="hoverable btn main-pattern grey-text text-darken-3 menu-button waves-effect">Souviner</router-link>
+                <router-link to="/gallery" class="hoverable btn main-pattern grey-text text-darken-3 menu-button waves-effect">Gallery</router-link>
             </div>
           </nav>
       </div>
@@ -40,6 +41,13 @@
           <li><a href="#">About</a></li>
       </ul>
     </div>
+    <ul class="collection with-header noticeboard" style="top:350px">
+      <li class="collection-header grey-text text-darken-2"><h4>Latest</h4></li>
+      <li><a class="collection-item" href="#">Sunday School Starts from 24th July.</a></li>
+      <li><a class="collection-item" href="#">Committie meeting has been called for electricity bill complications.</a></li>
+      <li><a class="collection-item" href="#">Rev. Samuel David will be visiting our chapel for sunday's service on 12 June 2018.</a></li>
+
+    </ul>
   </header>
 </template>
 
@@ -70,6 +78,17 @@ export default {
 <style scoped>
 nav {
   z-index: 100;
+}
+
+.noticeboard{
+  position: fixed;
+  z-index: 101;
+  right:0;
+  overflow: scroll;
+  max-height: 35vh;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  width: 200px;
 }
 .brand-logo {
   font-family: "Passion One", cursive;
@@ -118,7 +137,7 @@ nav {
   margin: 10px 0;
   border-top-left-radius: 100px;
   border-bottom-left-radius: 100px;
-  width: 12vw;
+  width: 200px;
 }
 
 .menu-button-mobile {

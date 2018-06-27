@@ -2,15 +2,16 @@
   <footer class="page-footer grey darken-3">
     <div class="container">
         <div class="row">
-        <div class="col l6 s12">
+        <div class="col l4 s9">
             <h5 class="white-text">Address</h5>
             <p class="grey-text text-lighten-4">
-                You can use rows and columns here to organize your footer content.
-                You can use rows and columns here to organize your footer content.
-                You can use rows and columns here to organize your footer content.
+                St. George Orthodox Church, Sector 9, Dwarka, New Delhi - 110075
+            </p>
+            <p>
+            <strong>Email:</strong> contact@abcd.com
             </p>
         </div>
-        <div class="col l4 offset-l2 s12">
+        <div class="col l1 offset-l7 s12">
             <h5 class="white-text">Links</h5>
             <ul>
             <li><a class="grey-text text-lighten-3" href="#!">Link 1</a></li>

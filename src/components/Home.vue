@@ -50,14 +50,12 @@ import data from '@/../data.json'
 var about = data.about;
 function initMaterialCSS() {
   //M.AutoInit();
-  document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('.slider');
     var instances = M.Slider.init(elems, {
       indicators: true,
       height: 600,
       });
     console.log(instances);
-  });
 }
 export default {
   name: "Home",
@@ -70,7 +68,9 @@ export default {
   },
   mounted: function() {
     initMaterialCSS();
-  }
+  },
+  updated: initMaterialCSS,
+  components:{}
 }
 </script>
 
