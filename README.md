@@ -1,30 +1,5 @@
-# St George Orthodox Church, Dwarka
+# Vue 3 + Vite
 
-Website for St. George Orthodox Church, Dwarka using `vue.js` and `materialze.css`.
+This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-> The website can be found [here](http://sidhin.in/church)
-
-## Build Setup
-
-``` bash
-# install dependencies
-npm install
-
-# To start the dvelopment server
-npm start
-
-# build for production with minification
-# The built files are saved in 'dist/'
-npm run build
-
-# To deploy the project for github (gh-pages)
-npm run deploy
-```
-
-## Contributing
-
-Due this being a personal project, pull rerquests will not be accepted. However, issues are welcome!
-
-## Maintained by
-
-- [Sidhin S Thomas](http://sidhin.in)
+Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
