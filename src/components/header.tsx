@@ -1,4 +1,4 @@
-import { Affix, Card, Image, Menu, MenuProps, Button, Flex, Typography, Divider, Space } from 'antd';
+import { Affix, Card, Image, Menu, MenuProps, Button, Flex, Typography, Divider, Space, List } from 'antd';
 import React from 'react';
 
 import avatar from '../assets/logo.png';
@@ -29,10 +29,10 @@ export class Header extends React.Component {
         return (
            <>
             <Menu mode="horizontal" 
-            style={{justifyContent: 'flex-end', boxShadow:'0 2px 2px -2px grey', position:'absolute', top:0, width:'100%'}}
+            style={{justifyContent: 'flex-end', boxShadow:'0 2px 2px -2px grey', position:'fixed', top:0, width:'100%', height:50}}
             items={items} />
            {this.render_side_nav()}
-           <Card style={{position:'absolute', padding:0, boxShadow:'1px 1px 5px grey', borderRadius:'10px 10px 100px 100px', top:0 }} size='small' hoverable>
+           <Card style={{position:'fixed', padding:0, boxShadow:'1px 1px 5px grey', borderRadius:'10px 10px 100px 100px', top:0 }} size='small' hoverable>
                 <Image src={avatar} width={150} preview={false}  />
             </Card>
            </> 
@@ -41,7 +41,7 @@ export class Header extends React.Component {
 
     render_side_nav() {
         return (
-            <div style={{position:'absolute', top:80, right:10, width: 200}}>
+            <div style={{position:'fixed', top:80, right:30, width: 200}}>
                 <Flex vertical gap={10}>
                 <Button shape='round' size='large' block>Vicars</Button>
                 <Button shape='round' size='large' block>Management</Button>
@@ -54,19 +54,28 @@ export class Header extends React.Component {
     }
 
     render_news() {
-        const render_news_item = (info: string) => {
+        const render_news_item = (info: any, index:number) => {
             return (
-                <>
-                <Typography.Text style={{fontSize: 16, color: 'grey'}}>{info}</Typography.Text>
-                <Divider style={{padding:0, margin:0}} />
-                </>
+                <div key={index}>
+                    <Divider style={{ margin:5}} />
+                </div>
             )
         }
         const news_items = ['Sunday school to resume soon', 'New church building to be completed soon', 'New church website to be launched soon'];
         return (
-            <Card title="Latest" extra={<a href="#">More</a>}>
+            <Card title="Latest" extra={<a href="#">More</a>} style={{marginTop:30}}>
                 <Flex vertical gap={10}>
-                {news_items.map((item) => render_news_item(item))}
+                    <List
+                    dataSource={news_items}
+                    renderItem={(item) => 
+                       (
+                        <List.Item>
+                        <Typography.Text style={{fontSize: 16, color: 'grey'}}>{item}</Typography.Text>
+                        </List.Item>
+                       )
+                    }
+                    />
+                  
                 </Flex>
             </Card>
         )
