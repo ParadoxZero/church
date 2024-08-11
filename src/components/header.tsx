@@ -1,4 +1,4 @@
-import { Affix, Card, Image, Menu, MenuProps, Button, Flex, Typography, Divider } from 'antd';
+import { Affix, Card, Image, Menu, MenuProps, Button, Flex, Typography, Divider, Space } from 'antd';
 import React from 'react';
 
 import avatar from '../assets/logo.png';
@@ -17,19 +17,24 @@ const items: MenuItem[] = [
     {
         label: 'Contact',
         key: 'contact',
+    },
+    {
+        label: '',
+        key: '',
+        icon:<Space/>
     }
 ];
 export class Header extends React.Component {
     render() {
         return (
            <>
-            <Card style={{position:'absolute', padding:0, boxShadow:'1px 1px 5px grey' }} size='small' hoverable>
-                <Image src={avatar} width={150} preview={false}  />
-            </Card>
             <Menu mode="horizontal" 
-            style={{justifyContent: 'flex-end', boxShadow:'0 2px 2px -2px grey',}}
+            style={{justifyContent: 'flex-end', boxShadow:'0 2px 2px -2px grey', position:'absolute', top:0, width:'100%'}}
             items={items} />
            {this.render_side_nav()}
+           <Card style={{position:'absolute', padding:0, boxShadow:'1px 1px 5px grey', borderRadius:'10px 10px 100px 100px', top:0 }} size='small' hoverable>
+                <Image src={avatar} width={150} preview={false}  />
+            </Card>
            </> 
         );
     }
