@@ -25,15 +25,17 @@ const items: MenuItem[] = [
     }
 ];
 
-const shadow_style = {  };
-
 export class Header extends React.Component {
     render() {
         return (
            <>
-            <Menu mode="horizontal" 
+            <Menu mode="horizontal"
+            title='St. George Orthodox Church' 
             style={{justifyContent: 'flex-end', boxShadow:'0 2px 2px -2px grey', position:'fixed', top:0, width:'100%', height:50} }
-            items={items} />
+            items={items}>
+            </Menu>
+            <Typography.Title level={2} style={{position: 'fixed', padding:0, margin:0, left:'50%', transform:'translateX(-50%)',
+                            top: 0}}>St. George Orthodox Church</Typography.Title>
            {this.render_side_nav()}
            <Card style={{position:'fixed', padding:0, boxShadow:'1px 1px 5px grey', borderRadius:'10px 10px 100px 100px', top:0 }} size='small' hoverable>
                 <Image src={avatar} width={150} preview={false}  />
