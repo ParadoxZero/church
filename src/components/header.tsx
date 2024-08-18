@@ -25,7 +25,11 @@ const items: MenuItem[] = [
     }
 ];
 
-export class Header extends React.Component {
+export interface HeaderProps {
+    news: string[];
+}
+
+export class Header extends React.Component<HeaderProps> {
     render() {
         return (
            <>
@@ -46,7 +50,7 @@ export class Header extends React.Component {
 
     render_side_nav() {
         return (
-            <div style={{position:'fixed', top:80, right:30, width: 200}}>
+            <div style={{position:'fixed', top:80, right:10, width: 250}}>
                 <Flex vertical gap={10}>
                 <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Vicars</Button>
                 <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Management</Button>
@@ -59,16 +63,9 @@ export class Header extends React.Component {
     }
 
     render_news() {
-        const news_items = ['Sunday school to resume soon', 
-            'New church building to be completed soon', 
-            'New church website to be launched soon',
-            'New church website to be launched soon',
-            'New church website to be launched soon',
-            'New church website to be launched soon',
-            'New church website to be launched soon',
-        ];
+        const news_items = this.props.news;
         return (
-            <Card title="Latest" extra={<a href="#">More</a>} style={{marginTop:30, maxHeight:300, overflow:'scroll', scrollBehavior:'smooth',boxShadow:'1px 1px 5px grey'}} bordered>
+            <Card title="Latest" extra={<a href="#">More</a>} style={{marginTop:30, maxHeight:300, overflowY:'scroll', scrollBehavior:'smooth',boxShadow:'1px 1px 5px grey'}} bordered>
                 <Flex vertical gap={10}>
                     <List
                     dataSource={news_items}
