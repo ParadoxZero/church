@@ -5,6 +5,7 @@ import {Home} from './pages/home';
 import { getWebInfo, WebInfo } from './service/data_service';
 import { useState } from 'react';
 import { Empty, Flex, Spin } from 'antd';
+import { Management } from './pages/management';
 
 function App() {
 
@@ -31,6 +32,10 @@ function App() {
       path: "/",
       element: <Home title={info.home_title} description={info.home_description} story_title={info.home_story_title} story={info.home_story} />,      
     },
+    {
+      path: "/management",
+      element: <Management details={info.current_management} history={info.management_history} />,
+    }
   ]);
 
   return (

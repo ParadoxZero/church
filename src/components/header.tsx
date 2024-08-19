@@ -2,12 +2,17 @@ import { Affix, Card, Image, Menu, MenuProps, Button, Flex, Typography, Divider,
 import React from 'react';
 
 import avatar from '../assets/logo.png';
+import { Link } from 'react-router-dom';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
 const items: MenuItem[] = [
     {
-        label: 'Home',
+        label: (
+            <a href="/">
+              Home
+            </a>
+          ),
         key: 'home',
     },
     {
@@ -53,7 +58,7 @@ export class Header extends React.Component<HeaderProps> {
             <div style={{position:'fixed', top:80, right:10, width: 250}}>
                 <Flex vertical gap={10}>
                 <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Vicars</Button>
-                <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Management</Button>
+                <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block href="/management">Management</Button>
                 <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Ministries</Button>
                 <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Gallery</Button>
                 {this.render_news()}
