@@ -16,12 +16,14 @@ const items: MenuItem[] = [
         key: 'home',
     },
     {
-        label: 'Newsletter',
-        key: 'newsletter',
+        label: 'Contact Us',
+        key: 'contact',
     },
     {
-        label: 'Contact',
-        key: 'contact',
+        label: (
+            <Button type='link' style={{boxShadow:'1px 1px 5px grey'}} href=""> News Letter</Button>
+        ),
+        key: 'newsletter',
     },
     {
         label: '',
