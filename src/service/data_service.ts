@@ -2,8 +2,8 @@ export interface VicarDetails {
     name: string;
     profile: string;
     image: string;
-    from_Year: string;
-    to_Year: string;
+    from_year: string;
+    to_year: string;
 }
 
 export interface ManagementDetails {

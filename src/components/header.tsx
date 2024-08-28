@@ -59,7 +59,7 @@ export class Header extends React.Component<HeaderProps> {
         return (
             <div style={{position:'fixed', top:80, right:10, width: 250}}>
                 <Flex vertical gap={10}>
-                <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Vicars</Button>
+                <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block href='/vicars'>Vicars</Button>
                 <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block href="/management">Management</Button>
                 <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Ministries</Button>
                 <Button shape='round' size='large' style={{boxShadow:'1px 1px 5px grey'}} block>Gallery</Button>

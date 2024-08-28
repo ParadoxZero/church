@@ -6,6 +6,8 @@ import { getWebInfo, WebInfo } from './service/data_service';
 import { useState } from 'react';
 import { Empty, Flex, Spin } from 'antd';
 import { Management } from './pages/management';
+import bgUrl from './assets/straws.png'
+import { Vicars } from './pages/vicars';
 
 function App() {
 
@@ -35,12 +37,16 @@ function App() {
     {
       path: "/management",
       element: <Management details={info.current_management} history={info.management_history} />,
+    },
+    {
+      path: "/vicars",
+      element: <Vicars vicars={info.vicars} />,
     }
   ]);
 
   return (
     <>
-     <div style={{marginTop:50}}>
+     <div style={{marginTop:50, backgroundImage:bgUrl}}>
       <RouterProvider router={router}/>
      </div>
      <Header news={info.latest_news}/>
