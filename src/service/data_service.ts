@@ -15,10 +15,6 @@ export interface ManagementDetails {
     year?: string;
 }
 
-export interface MinistryDetails {
-    name: string;
-    description: string;
-}
 
 export interface WebInfo {
     vicars: VicarDetails[];
@@ -31,7 +27,7 @@ export interface WebInfo {
     management_history: ManagementDetails[];
     gallery: string[];
     news_letter: string;
-    ministries: MinistryDetails[];
+    ministries: string[];
 }
 
 export async function getWebInfo(): Promise<WebInfo> {

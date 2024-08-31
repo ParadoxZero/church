@@ -45,7 +45,7 @@ function App() {
     },
     {
       path: "/ministries",
-      element: <MinistriesPage />
+      element: <MinistriesPage ministry_paras={info.ministries} />
     }
   ]);
 
