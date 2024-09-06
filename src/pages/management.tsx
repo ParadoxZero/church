@@ -1,4 +1,4 @@
-import { Descriptions, Flex, Space, Table, Typography } from "antd";
+import { Flex, Table, Typography } from "antd";
 import { ManagementDetails } from "../service/data_service";
 
 export function Management(props: { details: ManagementDetails, history: ManagementDetails[] }) {
@@ -32,7 +32,7 @@ export function Management(props: { details: ManagementDetails, history: Managem
             title: 'Treasurer - Society',
             dataIndex: 'treasuerer_society',
             key: 'treasuerer_society'
-        }  
+        }
     ];
 
     const current_management = props.details;
@@ -41,11 +41,11 @@ export function Management(props: { details: ManagementDetails, history: Managem
         <Flex vertical align="center" gap={50} style={{ marginTop: 100 }}>
             <div>
                 <Typography.Title level={2}>Current Management</Typography.Title>
-                <Table dataSource={[props.details]} columns={columns} pagination={false} style={{width:'100%'}} size="large" bordered/>
+                <Table dataSource={[props.details]} columns={columns} pagination={false} style={{ width: '100%' }} size="large" bordered />
             </div>
             <div>
                 <Typography.Title level={2}>History</Typography.Title>
-                <Table dataSource={props.history} columns={columns}  size="small"/>
+                <Table dataSource={props.history} columns={columns} size="small" />
             </div>
         </Flex>
     )

@@ -1,8 +1,7 @@
-import { Affix, Card, Image, Menu, MenuProps, Button, Flex, Typography, Divider, Space, List } from 'antd';
+import { Card, Image, Menu, MenuProps, Button, Flex, Typography, Space, List } from 'antd';
 import React from 'react';
 
 import avatar from '../assets/logo.png';
-import { Link } from 'react-router-dom';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
