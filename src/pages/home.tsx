@@ -25,16 +25,16 @@ export class Home extends React.Component<HomeProps> {
 
     render_show_screen() {
         const carhousel_item = (src: string, caption: string, subcaption: string) => {
-            let header_level = 1;
+            let header_level: 1 | 2 | 3 | 4 | undefined = 1;
+            let subtitle_level: 1 | 2 | 3 | 4 | undefined = 3;
             switch (getCurrentScreenSize()) {
                 case ScreenSize.SMALL:
                     header_level = 2;
+                    subtitle_level = 4;
                     break;
                 case ScreenSize.MEDIUM:
                     header_level = 2;
-                    break;
-                case ScreenSize.LARGE:
-                    header_level = 1;
+                    subtitle_level = 4;
                     break;
             }
             return (
@@ -47,7 +47,7 @@ export class Home extends React.Component<HomeProps> {
                         }}>
                             <div style={{ padding: '5px 30px', borderRadius: 20, backgroundColor: 'rgba(0, 0, 0, 0.459)', width: 'auto' }}>
                                 <Typography.Title style={{ color: '#f0f0f0' }} level={header_level}>{caption}</Typography.Title>
-                                <Typography.Title style={{ color: '#f0f0f0' }} color='grey' level={header_level + 2} className="light grey-text text-lighten-3">{subcaption}</Typography.Title>
+                                <Typography.Title style={{ color: '#f0f0f0' }} color='grey' level={subtitle_level} className="light grey-text text-lighten-3">{subcaption}</Typography.Title>
                             </div>
                         </div>
                     </div>
