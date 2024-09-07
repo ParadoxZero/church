@@ -5,6 +5,7 @@ import bible2Src from '../assets/bible2.jpg';
 import crossSrc from '../assets/cross.jpg';
 
 import { Card, Carousel, Image, Typography } from 'antd';
+import { getCurrentScreenSize, ScreenSize } from '../service/screen_size';
 
 export interface HomeProps {
     title: string;
@@ -15,7 +16,7 @@ export interface HomeProps {
 export class Home extends React.Component<HomeProps> {
     render() {
         return (
-            <div style={{  }}>
+            <div style={{}}>
                 {this.render_show_screen()}
                 {this.render_intro_text()}
             </div>
@@ -24,17 +25,29 @@ export class Home extends React.Component<HomeProps> {
 
     render_show_screen() {
         const carhousel_item = (src: string, caption: string, subcaption: string) => {
+            let header_level = 1;
+            switch (getCurrentScreenSize()) {
+                case ScreenSize.SMALL:
+                    header_level = 2;
+                    break;
+                case ScreenSize.MEDIUM:
+                    header_level = 2;
+                    break;
+                case ScreenSize.LARGE:
+                    header_level = 1;
+                    break;
+            }
             return (
                 <div>
-                    <div style={{ height: '60vh', overflow: 'hidden' }}>
+                    <div style={{ maxHeight: '60vh', overflow: 'hidden' }}>
                         <Image src={src} preview={false} placeholder={true} width={'100%'} />
                         <div style={{
                             textAlign: 'center', position: 'absolute',
                             top: 0, width: '100vw', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex'
                         }}>
                             <div style={{ padding: '5px 30px', borderRadius: 20, backgroundColor: 'rgba(0, 0, 0, 0.459)', width: 'auto' }}>
-                                <Typography.Title style={{ color: '#f0f0f0' }} level={1}>{caption}</Typography.Title>
-                                <Typography.Title style={{ color: '#f0f0f0' }} color='grey' level={3} className="light grey-text text-lighten-3">{subcaption}</Typography.Title>
+                                <Typography.Title style={{ color: '#f0f0f0' }} level={header_level}>{caption}</Typography.Title>
+                                <Typography.Title style={{ color: '#f0f0f0' }} color='grey' level={header_level + 2} className="light grey-text text-lighten-3">{subcaption}</Typography.Title>
                             </div>
                         </div>
                     </div>
