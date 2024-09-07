@@ -9,6 +9,7 @@ import { Management } from './pages/management';
 import bgUrl from './assets/straws.png'
 import { Vicars } from './pages/vicars';
 import { MinistriesPage } from './pages/ministries';
+import { UnderConstruction } from './components/under_construction';
 
 function App() {
 
@@ -46,6 +47,10 @@ function App() {
     {
       path: "/ministries",
       element: <MinistriesPage ministry_paras={info.ministries} />
+    },
+    {
+      path: "*",
+      element: <UnderConstruction />,
     }
   ]);
 

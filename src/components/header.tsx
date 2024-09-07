@@ -17,7 +17,11 @@ const items: MenuItem[] = [
         key: 'home',
     },
     {
-        label: 'Contact Us',
+        label: (
+            <a href="/contact">
+                Contact Us
+            </a>
+        ),
         key: 'contact',
     },
     {
@@ -82,7 +86,11 @@ const small_items: MenuItem[] = [
         key: 'gallery',
     },
     {
-        label: 'Contact Us',
+        label: (
+            <a href='/contact'>
+                Contact Us
+            </a>
+        ),
         key: 'contact',
     },
 ];
@@ -179,10 +187,10 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
         return (
             <div style={{ position: 'fixed', top: 80, right: 10, width: 200 }}>
                 <Flex vertical gap={10}>
-                    <Button shape='round' size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href='/vicars'>Vicars</Button>
+                    <Button shape='round' size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href="/vicars">Vicars</Button>
                     <Button shape='round' size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href="/management">Management</Button>
                     <Button shape='round' size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href="/ministries" >Ministries</Button>
-                    <Button shape='round' size='large' style={{ boxShadow: '1px 1px 5px grey' }} block>Gallery</Button>
+                    <Button shape='round' size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href="/gallery" >Gallery</Button>
                     {this.render_news()}
                 </Flex>
             </div>
@@ -196,8 +204,8 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
                     <Button size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href='/vicars'>Vicars</Button>
                     <Button size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href="/management">Management</Button>
                     <Button size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href="/ministries" >Ministries</Button>
-                    <Button size='large' style={{ boxShadow: '1px 1px 5px grey' }} block>Gallery</Button>
-                    <Button size='large' style={{ boxShadow: '1px 1px 5px grey' }} block>News</Button>
+                    <Button size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href='/gallery' >Gallery</Button>
+                    <Button size='large' style={{ boxShadow: '1px 1px 5px grey' }} block href='/news'>News</Button>
                 </Flex>
             </div>
         )
