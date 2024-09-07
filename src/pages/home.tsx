@@ -4,7 +4,7 @@ import bibleSrc from '../assets/bible1.jpg';
 import bible2Src from '../assets/bible2.jpg';
 import crossSrc from '../assets/cross.jpg';
 
-import { Card, Carousel, Image, Typography } from 'antd';
+import { Card, Carousel, Flex, Image, Typography } from 'antd';
 import { getCurrentScreenSize, ScreenSize } from '../service/screen_size';
 
 export interface HomeProps {
@@ -71,17 +71,23 @@ export class Home extends React.Component<HomeProps> {
     }
 
     render_intro_text() {
+        let width = '100%';
+        if (getCurrentScreenSize() === ScreenSize.LARGE) {
+            width = '50%';
+        }
         return (
-            <Card style={{ width: '50%', left: '50%', transform: 'translate(-50%, 0)' }} bordered={false}>
-                <Typography.Title level={2}>{this.props.title}</Typography.Title>
-                {this.props.description.map((para, index) => (
-                    <Typography.Paragraph key={index}>{para}</Typography.Paragraph>
-                ))}
-                <Typography.Title level={3}>{this.props.story_title}</Typography.Title>
-                {this.props.story.map((para, index) => (
-                    <Typography.Paragraph key={index}>{para}</Typography.Paragraph>
-                ))}
-            </Card>
+            <Flex vertical style={{ width: '100%', padding: 10 }} align='center' justify='center'>
+                <Card style={{ width: width }} bordered={false}>
+                    <Typography.Title level={2}>{this.props.title}</Typography.Title>
+                    {this.props.description.map((para, index) => (
+                        <Typography.Paragraph key={index}>{para}</Typography.Paragraph>
+                    ))}
+                    <Typography.Title level={3}>{this.props.story_title}</Typography.Title>
+                    {this.props.story.map((para, index) => (
+                        <Typography.Paragraph key={index}>{para}</Typography.Paragraph>
+                    ))}
+                </Card>
+            </Flex>
         )
     }
 }
