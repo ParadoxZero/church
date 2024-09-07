@@ -217,7 +217,11 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     }
     render_news() {
         const news_items = this.props.news;
+        if (news_items.length === 0) {
+            return (<> </>);
+        }
         return (
+
             <Card title="Latest" extra={<a href="#">More</a>} style={{ marginTop: 30, maxHeight: 300, overflowY: 'scroll', scrollBehavior: 'smooth', boxShadow: '1px 1px 5px grey' }} bordered>
                 <Flex vertical gap={10}>
                     <List
