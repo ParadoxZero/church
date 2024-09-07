@@ -1,6 +1,8 @@
 import { Card, Image, Menu, MenuProps, Button, Flex, Typography, Space, List } from 'antd';
 import React from 'react';
 
+import { ScreenSize, getCurrentScreenSize } from '../service/screen_size';
+
 import avatar from '../assets/logo.png';
 
 type MenuItem = Required<MenuProps>['items'][number];
@@ -32,6 +34,13 @@ const items: MenuItem[] = [
 ];
 
 const small_items: MenuItem[] = [
+    {
+        label: (
+            <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href=""> News Letter</Button>
+        ),
+        key: 'newsletter',
+
+    },
     {
         label: (
             <a href="/">
@@ -76,19 +85,7 @@ const small_items: MenuItem[] = [
         label: 'Contact Us',
         key: 'contact',
     },
-    {
-        label: (
-            <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href=""> News Letter</Button>
-        ),
-        key: 'newsletter',
-
-    }
 ];
-enum ScreenSize {
-    SMALL = 0,
-    MEDIUM = 1,
-    LARGE = 2
-}
 
 export interface HeaderProps {
     news: string[];
@@ -102,24 +99,14 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     constructor(props: HeaderProps) {
         super(props);
         window.onresize = () => {
-            this.setState({ screen_size: this.getCurrentScreenSize() });
+            this.setState({ screen_size: getCurrentScreenSize() });
             console.log(this.state.screen_size);
         }
         this.state = {
-            screen_size: this.getCurrentScreenSize()
+            screen_size: getCurrentScreenSize()
         }
     }
 
-    getCurrentScreenSize(): ScreenSize {
-        const width = window.innerWidth;
-        if (width < 768) {
-            return ScreenSize.SMALL;
-        } else if (width < 1340) {
-            return ScreenSize.MEDIUM;
-        } else {
-            return ScreenSize.LARGE;
-        }
-    }
     render() {
         switch (this.state.screen_size) {
             case ScreenSize.SMALL:
