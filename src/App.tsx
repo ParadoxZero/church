@@ -10,6 +10,7 @@ import bgUrl from './assets/straws.png'
 import { Vicars } from './pages/vicars';
 import { MinistriesPage } from './pages/ministries';
 import { UnderConstruction } from './components/under_construction';
+import { Gallary } from './pages/gallary';
 
 function App() {
 
@@ -47,6 +48,10 @@ function App() {
     {
       path: "/ministries",
       element: <MinistriesPage ministry_paras={info.ministries} />
+    },
+    {
+      path: "/gallery",
+      element: <Gallary url_list={info.gallery} />
     },
     {
       path: "*",
