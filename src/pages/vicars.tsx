@@ -1,11 +1,16 @@
 import { Collapse, Descriptions, Flex, Image } from "antd";
 import { VicarDetails } from "../service/data_service";
+import { getCurrentScreenSize, ScreenSize } from "../service/screen_size";
 
 export function Vicars(props: { vicars: VicarDetails[] }) {
+    let width = '90vw';
+    if (getCurrentScreenSize() === ScreenSize.LARGE) {
+        width = '60vw';
+    }
     return (
         <>
             <Flex vertical align="center" gap={50} style={{ marginTop: 100 }}>
-                <Collapse accordion defaultActiveKey={0}>
+                <Collapse accordion defaultActiveKey={0} style={{ width }}>
                     {props.vicars.map((vicar, index) =>
                     (
                         <Collapse.Panel header={vicar.name} key={index} style={{ maxWidth: 800 }}>
