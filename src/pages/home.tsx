@@ -6,7 +6,6 @@ import crossSrc from '../assets/cross.jpg';
 
 import { Card, Carousel, Flex, Image, Typography } from 'antd';
 import { getCurrentScreenSize, ScreenSize } from '../service/screen_size';
-import { Contact } from '../components/contact';
 import { ContactDetails } from '../service/data_service';
 
 export interface HomeProps {

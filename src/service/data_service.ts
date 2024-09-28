@@ -17,6 +17,7 @@ export interface ManagementDetails {
 
 export interface ContactDetails {
     address: string[];
+    chairman: string;
     phone: string;
     email: string;
 }

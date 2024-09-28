@@ -1,4 +1,4 @@
-import { Card, Flex } from "antd";
+import { Flex } from "antd";
 import { Contact as ContactElement } from "../components/contact";
 import { ContactDetails } from "../service/data_service";
 
