@@ -52,6 +52,14 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
             },
             {
                 label: (
+                    <a href='/contact'>
+                        Contact
+                    </a>
+                ),
+                key: 'contact',
+            },
+            {
+                label: (
                     <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href={this.props.newsletter}> News Letter</Button>
                 ),
                 key: 'newsletter',
@@ -132,6 +140,14 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
                 ),
                 key: 'gallery',
             },
+            {
+                label: (
+                    <a href='/contact'>
+                        Contact
+                    </a>
+                ),
+                key: 'contact',
+            }
         ];
         let render_avatar = false;
         if (window.location.pathname === '/') {
@@ -205,6 +221,14 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
                 ),
                 key: 'gallery',
             },
+            {
+                label: (
+                    <a href='/contact'>
+                        Contact
+                    </a>
+                ),
+                key: 'contact',
+            }
         ];
         return (
             <>

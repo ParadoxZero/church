@@ -11,6 +11,7 @@ import { Vicars } from './pages/vicars';
 import { MinistriesPage } from './pages/ministries';
 import { UnderConstruction } from './components/under_construction';
 import { Gallary } from './pages/gallary';
+import { Contact } from './pages/contact';
 
 function App() {
 
@@ -58,6 +59,10 @@ function App() {
     {
       path: "/gallery",
       element: <Gallary url_list={info.gallery} />
+    },
+    {
+      path: "/contact",
+      element: <Contact contact={info.contact} />
     },
     {
       path: "*",
