@@ -37,6 +37,7 @@ function App() {
       path: "/",
       element: <Home
         title={info.home_title}
+        contact_details={info.contact}
         description={info.home_description}
         service_info={info.service_info}
         story_title={info.home_story_title}

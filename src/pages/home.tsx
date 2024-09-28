@@ -6,6 +6,8 @@ import crossSrc from '../assets/cross.jpg';
 
 import { Card, Carousel, Flex, Image, Typography } from 'antd';
 import { getCurrentScreenSize, ScreenSize } from '../service/screen_size';
+import { Contact } from '../components/contact';
+import { ContactDetails } from '../service/data_service';
 
 export interface HomeProps {
     title: string;
@@ -13,6 +15,7 @@ export interface HomeProps {
     story_title: string;
     story: string[];
     service_info: string;
+    contact_details: ContactDetails;
 }
 export class Home extends React.Component<HomeProps> {
     render() {
@@ -78,7 +81,7 @@ export class Home extends React.Component<HomeProps> {
             width = '50%';
         }
         return (
-            <Flex vertical style={{ width: '100%', padding: 10 }} align='center' justify='center'>
+            <Flex vertical style={{ width: '100%', padding: 10 }} gap={10} align='center' justify='center'>
                 <Card style={{ width: width }} bordered={false}>
                     <Typography.Title level={2}>{this.props.title}</Typography.Title>
                     {this.props.description.map((para, index) => (
@@ -91,6 +94,8 @@ export class Home extends React.Component<HomeProps> {
                     {this.props.story.map((para, index) => (
                         <Typography.Paragraph key={index}>{para}</Typography.Paragraph>
                     ))}
+                    <br id='contact' />
+                    <Contact contact={this.props.contact_details} />
                 </Card>
             </Flex>
         )

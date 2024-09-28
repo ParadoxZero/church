@@ -34,6 +34,7 @@ export interface WebInfo {
     news_letter: string;
     ministries: string[];
     service_info: string;
+    contact: ContactDetails;
 }
 
 export async function getWebInfo(): Promise<WebInfo> {

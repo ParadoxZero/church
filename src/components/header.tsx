@@ -18,14 +18,6 @@ const items: MenuItem[] = [
     },
     {
         label: (
-            <a href="/contact">
-                Contact Us
-            </a>
-        ),
-        key: 'contact',
-    },
-    {
-        label: (
             <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href=""> News Letter</Button>
         ),
         key: 'newsletter',
@@ -84,14 +76,6 @@ const small_items: MenuItem[] = [
             </a>
         ),
         key: 'gallery',
-    },
-    {
-        label: (
-            <a href='/contact'>
-                Contact Us
-            </a>
-        ),
-        key: 'contact',
     },
 ];
 
