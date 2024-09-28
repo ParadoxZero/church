@@ -94,8 +94,6 @@ export class Home extends React.Component<HomeProps> {
                     {this.props.story.map((para, index) => (
                         <Typography.Paragraph key={index}>{para}</Typography.Paragraph>
                     ))}
-                    <br id='contact' />
-                    <Contact contact={this.props.contact_details} />
                 </Card>
             </Flex>
         )
