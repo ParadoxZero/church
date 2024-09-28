@@ -15,6 +15,11 @@ export interface ManagementDetails {
     year?: string;
 }
 
+export interface ContactDetails {
+    address: string[];
+    phone: string;
+    email: string;
+}
 
 export interface WebInfo {
     vicars: VicarDetails[];
@@ -28,6 +33,7 @@ export interface WebInfo {
     gallery: string[];
     news_letter: string;
     ministries: string[];
+    service_info: string;
 }
 
 export async function getWebInfo(): Promise<WebInfo> {

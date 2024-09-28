@@ -35,7 +35,12 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home title={info.home_title} description={info.home_description} story_title={info.home_story_title} story={info.home_story} />,
+      element: <Home
+        title={info.home_title}
+        description={info.home_description}
+        service_info={info.service_info}
+        story_title={info.home_story_title}
+        story={info.home_story} />,
     },
     {
       path: "/management",

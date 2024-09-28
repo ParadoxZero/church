@@ -12,6 +12,7 @@ export interface HomeProps {
     description: string[];
     story_title: string;
     story: string[];
+    service_info: string;
 }
 export class Home extends React.Component<HomeProps> {
     render() {
@@ -40,7 +41,8 @@ export class Home extends React.Component<HomeProps> {
             return (
                 <div>
                     <div style={{ maxHeight: '60vh', overflow: 'hidden' }}>
-                        <Image src={src} preview={false} placeholder={true} width={'100%'} />
+                        <Image src={src} style={{ padding: 0, margin: 0 }}
+                            preview={false} placeholder={true} width={'100%'} />
                         <div style={{
                             textAlign: 'center', position: 'absolute',
                             top: 0, width: '100vw', height: '100%', justifyContent: 'center', alignItems: 'center', display: 'flex'
@@ -82,6 +84,9 @@ export class Home extends React.Component<HomeProps> {
                     {this.props.description.map((para, index) => (
                         <Typography.Paragraph key={index}>{para}</Typography.Paragraph>
                     ))}
+                    <Image src={this.props.service_info} width={"100%"}
+                        preview={false}
+                        style={{ padding: 0, margin: 0, marginTop: 10, marginBottom: 10 }} />
                     <Typography.Title level={3}>{this.props.story_title}</Typography.Title>
                     {this.props.story.map((para, index) => (
                         <Typography.Paragraph key={index}>{para}</Typography.Paragraph>
