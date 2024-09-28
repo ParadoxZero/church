@@ -1,6 +1,6 @@
 import React from 'react';
 
-import bibleSrc from '../assets/bible1.jpg';
+import churchSrc from '../assets/church.jpg';
 import bible2Src from '../assets/bible2.jpg';
 import crossSrc from '../assets/cross.jpg';
 
@@ -61,7 +61,7 @@ export class Home extends React.Component<HomeProps> {
         return (
             <Carousel arrows style={{ margin: 0 }} dotPosition='top'>
                 <div>
-                    {carhousel_item(bibleSrc, "St. George Orthodox Church", "Dwarka, New Delhi")}
+                    {carhousel_item(churchSrc, "St. George Orthodox Church", "Dwarka, New Delhi")}
                 </div>
                 <div>
                     {carhousel_item(bible2Src, "'He who seeks shall find'", "John 15:2")}
