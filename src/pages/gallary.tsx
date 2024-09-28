@@ -1,4 +1,4 @@
-import { Card, Flex, Image } from "antd";
+import { Flex, Image } from "antd";
 import { getCurrentScreenSize, ScreenSize } from "../service/screen_size";
 
 export function Gallary(props: { url_list: string[] }) {

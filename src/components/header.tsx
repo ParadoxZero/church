@@ -7,80 +7,10 @@ import avatar from '../assets/logo.png';
 
 type MenuItem = Required<MenuProps>['items'][number];
 
-const items: MenuItem[] = [
-    {
-        label: (
-            <a href="/">
-                Home
-            </a>
-        ),
-        key: 'home',
-    },
-    {
-        label: (
-            <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href=""> News Letter</Button>
-        ),
-        key: 'newsletter',
-    },
-    {
-        label: '',
-        key: '',
-        icon: <Space />
-    }
-];
-
-const small_items: MenuItem[] = [
-    {
-        label: (
-            <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href=""> News Letter</Button>
-        ),
-        key: 'newsletter',
-
-    },
-    {
-        label: (
-            <a href="/">
-                Home
-            </a>
-        ),
-        key: 'home',
-    },
-    {
-        label: (
-            <a href='/vicars'>
-                Vicars
-            </a>
-        ),
-        key: 'vicars',
-    },
-    {
-        label: (
-            <a href='/management'>
-                Management
-            </a>
-        ),
-        key: 'management',
-    },
-    {
-        label: (
-            <a href='/ministries'>
-                Ministries
-            </a>
-        ),
-        key: 'ministries',
-    },
-    {
-        label: (
-            <a href='/gallery'>
-                Gallery
-            </a>
-        ),
-        key: 'gallery',
-    },
-];
 
 export interface HeaderProps {
     news: string[];
+    newsletter: string;
 }
 
 interface HeaderState {
@@ -111,6 +41,28 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     }
 
     render_big_screen() {
+        const items: MenuItem[] = [
+            {
+                label: (
+                    <a href="/">
+                        Home
+                    </a>
+                ),
+                key: 'home',
+            },
+            {
+                label: (
+                    <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href={this.props.newsletter}> News Letter</Button>
+                ),
+                key: 'newsletter',
+            },
+            {
+                label: '',
+                key: '',
+                icon: <Space />
+            }
+        ];
+
         return (
             <>
                 <Menu mode="horizontal"
@@ -132,6 +84,55 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     }
 
     render_medium_screen() {
+        const small_items: MenuItem[] = [
+            {
+                label: (
+                    <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href={this.props.newsletter}> News Letter</Button>
+                ),
+                key: 'newsletter',
+
+            },
+            {
+                label: (
+                    <a href="/">
+                        Home
+                    </a>
+                ),
+                key: 'home',
+            },
+            {
+                label: (
+                    <a href='/vicars'>
+                        Vicars
+                    </a>
+                ),
+                key: 'vicars',
+            },
+            {
+                label: (
+                    <a href='/management'>
+                        Management
+                    </a>
+                ),
+                key: 'management',
+            },
+            {
+                label: (
+                    <a href='/ministries'>
+                        Ministries
+                    </a>
+                ),
+                key: 'ministries',
+            },
+            {
+                label: (
+                    <a href='/gallery'>
+                        Gallery
+                    </a>
+                ),
+                key: 'gallery',
+            },
+        ];
         let render_avatar = false;
         if (window.location.pathname === '/') {
             console.log(window.location.pathname);
@@ -156,6 +157,55 @@ export class Header extends React.Component<HeaderProps, HeaderState> {
     }
 
     render_small_screen() {
+        const small_items: MenuItem[] = [
+            {
+                label: (
+                    <Button type='link' style={{ boxShadow: '1px 1px 5px grey' }} href={this.props.newsletter}> News Letter</Button>
+                ),
+                key: 'newsletter',
+
+            },
+            {
+                label: (
+                    <a href="/">
+                        Home
+                    </a>
+                ),
+                key: 'home',
+            },
+            {
+                label: (
+                    <a href='/vicars'>
+                        Vicars
+                    </a>
+                ),
+                key: 'vicars',
+            },
+            {
+                label: (
+                    <a href='/management'>
+                        Management
+                    </a>
+                ),
+                key: 'management',
+            },
+            {
+                label: (
+                    <a href='/ministries'>
+                        Ministries
+                    </a>
+                ),
+                key: 'ministries',
+            },
+            {
+                label: (
+                    <a href='/gallery'>
+                        Gallery
+                    </a>
+                ),
+                key: 'gallery',
+            },
+        ];
         return (
             <>
                 <Menu mode="horizontal"

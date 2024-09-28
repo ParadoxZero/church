@@ -70,7 +70,7 @@ function App() {
       <div style={{ marginTop: 50, backgroundImage: bgUrl }}>
         <RouterProvider router={router} />
       </div>
-      <Header news={info.latest_news} />
+      <Header newsletter={info.news_letter} news={info.latest_news} />
     </>
   )
 }
