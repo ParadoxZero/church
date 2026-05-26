@@ -1,0 +1,82 @@
+{
+  "home_title": "St. George's Orthodox Church",
+  "home_description": [
+    "Welcome to St. George's Orthodox Church, a vibrant community of faith rooted in the ancient traditions of the Malankara Orthodox Syrian Church.",
+    "We invite you to join us in worship, fellowship, and service as we grow together in Christ."
+  ],
+  "home_story_title": "Our Story",
+  "home_story": [
+    "St. George's Orthodox Church was established to serve the spiritual needs of the Orthodox Christian community.",
+    "Over the decades, our parish has grown into a thriving community committed to preserving our rich liturgical heritage while reaching out to the wider community.",
+    "We are blessed with dedicated clergy and laity who work together in love and unity."
+  ],
+  "latest_news": [
+    "Sunday Holy Qurbana at 9:00 AM",
+    "Vacation Bible School registration now open",
+    "Annual Parish Day celebrations on the first Sunday of October"
+  ],
+  "vicars": [
+    {
+      "name": "Rev. Fr. Sample Priest",
+      "profile": "Fr. Sample Priest has served the parish with dedication since his appointment. He holds a degree in theology from the Orthodox Theological Seminary.",
+      "image": "/church.jpg",
+      "from_year": "2020",
+      "to_year": "present"
+    },
+    {
+      "name": "Rev. Fr. Former Priest",
+      "profile": "Fr. Former Priest served the parish faithfully for many years, building a strong foundation for the community.",
+      "image": "/church.jpg",
+      "from_year": "2010",
+      "to_year": "2020"
+    }
+  ],
+  "current_management": {
+    "year": "2024",
+    "chairman": "John Thomas",
+    "vice_chairman": "George Mathew",
+    "secretary": "Abraham Philip",
+    "treasurer_church": "Thomas Jacob",
+    "treasurer_society": "Samuel Varghese"
+  },
+  "management_history": [
+    {
+      "year": "2022",
+      "chairman": "Philip George",
+      "vice_chairman": "Mathew Abraham",
+      "secretary": "Jacob Thomas",
+      "treasurer_church": "Varghese Samuel",
+      "treasurer_society": "George Philip"
+    },
+    {
+      "year": "2020",
+      "chairman": "Abraham Jacob",
+      "vice_chairman": "Samuel George",
+      "secretary": "Thomas Philip",
+      "treasurer_church": "George Varghese",
+      "treasurer_society": "Philip Abraham"
+    }
+  ],
+  "gallery": [
+    "/church.jpg"
+  ],
+  "news_letter": "",
+  "ministries": [
+    "Sunday School",
+    "Youth Fellowship",
+    "Marth Mariam Samajam",
+    "Prayer Group",
+    "Choir"
+  ],
+  "service_info": "Holy Qurbana is celebrated every Sunday at 9:00 AM. Special services are held on all major feast days of the Malankara Orthodox Syrian Church. Please contact the vicar for details on baptisms, weddings, and other sacraments.",
+  "contact": {
+    "address": [
+      "St. George's Orthodox Church",
+      "123 Church Road",
+      "City, State 000000"
+    ],
+    "chairman": "John Thomas",
+    "phone": "+91 00000 00000",
+    "email": "info@stgeorgesorthodox.org"
+  }
+}

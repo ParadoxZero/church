@@ -39,6 +39,6 @@ export interface WebInfo {
 }
 
 export async function getWebInfo(): Promise<WebInfo> {
-    const response = await fetch('https://stgordstorage.blob.core.windows.net/static-files/web_info.json');
+    const response = await fetch('/web_info.json');
     return response.json();
 }
